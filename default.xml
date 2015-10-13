@@ -10,5 +10,6 @@
     <linkfile src="build.sh" dest="build.sh"/>
   </project>
 
+  <project name="ncarrier/fusion" path="packages/fusion"/>
   <project name="ncarrier/libptspair" path="packages/libptspair"/>
 </manifest>
