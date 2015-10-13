@@ -6,6 +6,7 @@
 
   <project name="Parrot-Developers/alchemy" path="alchemy"/>
 
+  <project name="ncarrier/firmwared-config" path="config"/>
   <project name="ncarrier/firmwared-scripts" path="scripts">
     <linkfile src="build.sh" dest="build.sh"/>
   </project>
