@@ -5,5 +5,8 @@
   <default remote="github" revision="master" sync-j="4"/>
   
   <project name="Parrot-Developers/alchemy" path="alchemy"/>
+
+  <project name="ncarrier/firmwared-scripts" path="scripts"/>
+
   <project name="ncarrier/libptspair" path="packages/libptspair"/>
 </manifest>
