@@ -61,7 +61,7 @@ We will then play a little with it:
 
         $ fdc prepare instances <tab>
         $ fdc start <tab>
-        $ adb connect $(fdc get_config net_first_two_bytes).$(fdc get_property instances <instance_name> id).1:9050
+        $ adb connect $(fdc get_config net_first_two_bytes)$(fdc get_property instances <instance_name> id).1:9050
         $ adb shell
         BusyBox v1.20.2 (2015-06-12 11:26:38 CEST) built-in shell (ash)
         Enter 'help' for a list of built-in commands.
