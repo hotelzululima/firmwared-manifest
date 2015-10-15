@@ -11,6 +11,7 @@
     <linkfile src="build.sh" dest="build.sh"/>
   </project>
 
+  <project name="ncarrier/fake_libulog" path="packages/fake_libulog"/>
   <project name="ncarrier/fusion" path="packages/fusion"/>
   <project name="ncarrier/libptspair" path="packages/libptspair"/>
   <project name="ncarrier/relog" path="packages/relog"/>
