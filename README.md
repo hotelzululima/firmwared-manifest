@@ -50,6 +50,8 @@ Then in another terminal:
         PONG
 
 Firmwared just said it was alive.
+*fdc* is a lightweight client for firmwared.
+For that reason, using *fdc* requires that firmwared is running.
 We need now to prepare a firmware (a rootfs), which we will instanciate later.
 An example minimal rootfs, with an adb server, is provided for testing:
 
@@ -78,6 +80,6 @@ Now we will cleanup all:
 
 You can obtain more help with:
 
-        $ fdc commands
+        $ fdc commands # be sure to have restarted firmwared before :)
         $ fdc help <command>
         $ man ./packages/firmwared/man/{fdc.1,firmwared.1,firmwared.conf.5}
