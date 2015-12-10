@@ -11,6 +11,8 @@ command line, one can use `pandoc README.md | lynx -stdin`.
 
 ### Needed packages
 
+For debian-based distributions (tested on debian 8):
+
         $ sudo apt-get install curl git build-essential pkg-config libssl-dev \
                 libapparmor-dev
 
@@ -25,7 +27,7 @@ command line, one can use `pandoc README.md | lynx -stdin`.
 
         $ mkdir firmwared
         $ cd firmwared
-        $ repo init -u git@github.com:ncarrier/firmwared-manifest.git
+        $ repo init -u https://github.com/ncarrier/firmwared-manifest.git
         $ repo sync
         $ . scripts/setenv
         $ bb all final -j5
