@@ -9,6 +9,11 @@ command line, one can use `pandoc README.md | lynx -stdin`.
 
 ## Quick start
 
+### Needed packages
+
+        $ sudo apt-get install curl git build-essential pkg-config libssl-dev \
+                libapparmor-dev
+
 ### The *firmwared* workspace uses google repo and parrot alchemy
 
         $ mkdir -p ~/bin
