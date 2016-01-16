@@ -14,7 +14,7 @@ command line, one can use `pandoc README.md | lynx -stdin`.
 For debian-based distributions (tested on debian 8):
 
         $ sudo apt-get install curl git build-essential pkg-config libssl-dev \
-                libapparmor-dev
+                libapparmor-dev libblkid-dev
 
 ### The *firmwared* workspace uses google repo and parrot alchemy
 
