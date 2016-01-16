@@ -2,13 +2,6 @@ sudo: false
 language: c
 compiler:
   - gcc
-#addons:
-#  apt:
-#    sources:
-#    - debian-sid
-#    packages:
-#    - gcc-arm-linux-gnueabi
-#    - ccache
 before_script:
   - git config --global user.email "firmwared@travis.org"
   - git config --global user.name "Firmwared build on Travis"
@@ -18,7 +11,7 @@ before_script:
   - mkdir bin
   - curl https://storage.googleapis.com/git-repo-downloads/repo > bin/repo
   - chmod a+x bin/repo
-  - ./bin/repo init -u https://github.com/ncarrier/carino-manifest
+  - ./bin/repo init -u https://github.com/ncarrier/firmwared-manifest
   - ./bin/repo sync
 script: ./tools/build.sh all final V=1
 
