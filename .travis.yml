@@ -13,5 +13,5 @@ before_script:
   - chmod a+x bin/repo
   - ./bin/repo init -u https://github.com/ncarrier/firmwared-manifest
   - ./bin/repo sync
-script: ./tools/build.sh all final V=1
+script: ./build.sh all final V=1
 
