@@ -6,8 +6,6 @@ before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y libblkid-dev libapparmor-dev liblua5.2-dev
 before_script:
-  - ls /usr/include/lua5.2/
-  - pkg-config --cflags lua-5.2
   - git config --global user.email "firmwared@travis.org"
   - git config --global user.name "Firmwared build on Travis"
   - git config --global color.ui true
