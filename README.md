@@ -1,5 +1,5 @@
 # firmwared manifest - workspace for building firmwared
-
+![Current travis build status](https://travis-ci.org/ncarrier/firmwared-manifest.svg?branch=master)
 ## Overview
 
 *firmwared* is a Daemon responsible of spawning drone firmware instances in
