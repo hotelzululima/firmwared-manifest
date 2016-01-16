@@ -17,5 +17,5 @@
   <project name="ncarrier/relog" path="packages/relog"/>
   <project name="Parrot-Developers/firmwared" path="packages/firmwared"/>
   <project name="Parrot-Developers/libpomp" path="packages/libpomp"/>
-  <project name="ncarrier/firmwared-prebuilt" path="prebuilt"/>
+  <project name="ncarrier/firmwared-prebuilt" path="packages/prebuilt"/>
 </manifest>
