@@ -18,4 +18,5 @@
   <project name="Parrot-Developers/firmwared" path="packages/firmwared"/>
   <project name="Parrot-Developers/libpomp" path="packages/libpomp"/>
   <project name="Parrot-Developers/lua" path="packages/lua"/>
+  <project name="ncarrier/firmwared-prebuilt" path="prebuilt"/>
 </manifest>
