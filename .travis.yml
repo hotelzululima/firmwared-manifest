@@ -16,5 +16,10 @@ before_script:
   - chmod a+x bin/repo
   - ./bin/repo init -u https://github.com/ncarrier/firmwared-manifest
   - ./bin/repo sync
-script: ./build.sh all final V=1
+script:
+  - ./build.sh all final V=1
+  - . Alchemy-out/linux-native-x64/final/native-wrapper.sh; \
+        sudo PATH=$PATH LD_LIBRARY_PATH=$LD_LIBRARY_PATH \
+        ./packages/firmwared/tests/run_firmwared.sh & \
+        ./packages/firmwared/tests/run_all.sh
 
