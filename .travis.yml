@@ -18,8 +18,8 @@ before_script:
   - ./bin/repo sync
 script:
   - ./build.sh all final V=1
-  - . Alchemy-out/linux-native-x64/final/native-wrapper.sh; \
-        sudo PATH=$PATH LD_LIBRARY_PATH=$LD_LIBRARY_PATH \
-        ./packages/firmwared/tests/run_firmwared.sh & \
+  - . Alchemy-out/linux-native-x64/final/native-wrapper.sh;
+        sudo PATH=$PATH LD_LIBRARY_PATH=$LD_LIBRARY_PATH
+        ./packages/firmwared/tests/run_firmwared.sh &
         ./packages/firmwared/tests/run_all.sh
 
