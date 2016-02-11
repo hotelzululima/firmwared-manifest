@@ -90,3 +90,57 @@ You can obtain more help with:
         $ fdc commands # be sure to have restarted firmwared before :)
         $ fdc help <command>
         $ man ./packages/firmwared/man/{fdc.1,firmwared.1,firmwared.conf.5}
+
+## automated tests
+
+Some components of the workspace come with automated tests.
+This section documents how to run them.
+
+### fusion
+
+At the root of the firmwared workspace, create a file named
+**Alchemy-debug-setup.mk**, containing the following line:
+
+        TARGET_TEST := 1
+
+Cleanup and rebuild the whole workspace:
+
+        $ rm -rf Alchemy-out
+        $ bb all final -j5
+        $ . scripts/setenv
+
+The tests are built-in the resulting libraries, you can run the with:
+
+        $ ./Alchemy-out/linux-native-x64/final/usr/lib/libutils.so
+        $ ./Alchemy-out/linux-native-x64/final/usr/lib/librs.so
+
+Tests for libioutils and libpidwatch must be ran as root:
+
+        # . ./Alchemy-out/linux-native-x64/final/native-wrapper.sh
+        # ./Alchemy-out/linux-native-x64/final/usr/lib/libpidwatch.so
+        # PROCESS_TEST_SCRIPT=./packages/fusion/libioutils/tests/test.process \
+                ./Alchemy-out/linux-native-x64/final/usr/lib/libioutils.so
+
+### firmwared
+
+The automated tests need:
+
+1. that no firmware is registered in firmwared, drop them with
+`fdc drop firmwares`
+2. that no instance is registered in firmwared, kill them with `fdc kill`, then
+drop them with `fdc drop instances`
+3. that **scripts/setenv** file has been sourced in each of the terminals you
+will use, or more precisely,
+**./Alchemy-out/linux-native-x64/final/native-wrapper.sh**.
+
+In one terminal, run firmwared via the script provided, which makes it be
+restarted until the end of the tests, if it quits:
+
+        # ./packages/firmwared/tests/run_firmwared.sh
+
+In another window, as a normal user, member of the **firmwared** group:
+
+        $ ./packages/firmwared/tests/run_all.sh
+
+Invidual tests in the firmwared/tests directory can be ran, and will return 0
+on success and 1 on error.
